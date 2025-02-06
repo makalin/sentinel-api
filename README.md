@@ -26,8 +26,8 @@ Bu proje, Laravel framework'ü kullanılarak geliştirilmiş basit bir API uygul
 
 1. Projeyi klonlayın:
 ```bash
-git clone https://github.com/your-username/laravel-api-project.git
-cd laravel-api-project
+git clone https://github.com/makalin/sentinel-api.git
+cd sentinel-api
 ```
 
 2. Bağımlılıkları yükleyin:
@@ -84,10 +84,10 @@ POST /api/register
 Content-Type: application/json
 
 {
-    "name": "Test User",
-    "email": "test@example.com",
-    "password": "password123",
-    "password_confirmation": "password123"
+    "name": "Test Kullanıcısı",
+    "email": "test@ornek.com",
+    "password": "sifre1234",
+    "password_confirmation": "sifre1234"
 }
 ```
 
@@ -97,8 +97,8 @@ POST /api/login
 Content-Type: application/json
 
 {
-    "email": "test@example.com",
-    "password": "password123"
+    "email": "test@ornek.com",
+    "password": "sifre1234"
 }
 ```
 
@@ -133,6 +133,4 @@ Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için [LICEN
 
 ## İletişim
 
-Sorularınız için:
-- Email: your-email@example.com
-- GitHub: [your-username](https://github.com/your-username)
+- GitHub: [makalin](https://github.com/makalin)
