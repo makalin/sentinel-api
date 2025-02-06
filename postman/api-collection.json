@@ -1,0 +1,118 @@
+{
+    "info": {
+        "name": "Laravel API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Register",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Test Kullanıcısı\",\n    \"email\": \"test@ornek.com\",\n    \"password\": \"sifre1234\",\n    \"password_confirmation\": \"sifre1234\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/register",
+                    "host": ["{{base_url}}"],
+                    "path": ["api", "register"]
+                }
+            }
+        },
+        {
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\": \"test@ornek.com\",\n    \"password\": \"sifre1234\"\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/login",
+                    "host": ["{{base_url}}"],
+                    "path": ["api", "login"]
+                }
+            }
+        },
+        {
+            "name": "Get User",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{base_url}}/api/user",
+                    "host": ["{{base_url}}"],
+                    "path": ["api", "user"]
+                }
+            }
+        },
+        {
+            "name": "Logout",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{base_url}}/api/logout",
+                    "host": ["{{base_url}}"],
+                    "path": ["api", "logout"]
+                }
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://localhost:8000"
+        },
+        {
+            "key": "token",
+            "value": "your_token_here"
+        }
+    ]
+} 
